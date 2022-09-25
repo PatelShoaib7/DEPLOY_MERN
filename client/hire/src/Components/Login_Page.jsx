@@ -13,7 +13,7 @@ export const Login_Page = () => {
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
-           fetch("http://localhost:1111/auth/login",{
+           fetch("/auth/login",{
                headers:{"Content-Type":"application/json"},
                method:'POST',
                body:JSON.stringify(user)

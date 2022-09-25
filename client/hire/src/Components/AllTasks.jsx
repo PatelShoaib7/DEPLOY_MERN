@@ -23,7 +23,7 @@ export const AllTasks = () => {
 
     const handleSubmit = async (e)=>{
          e.preventDefault()
-           fetch(`http://localhost:1111/user/${userId}/tasks`,{
+           fetch(`user/${userId}/tasks`,{
                headers:{"Content-Type":"application/json"},
                method:'POST',
                body:JSON.stringify(user)
@@ -37,7 +37,7 @@ export const AllTasks = () => {
      }
 
     const getAllTask = async()=>{
-        await fetch(`http://localhost:1111/user/${userId}/tasks`)
+        await fetch(`user/${userId}/tasks`)
         .then((res)=>res.json())
         .then((res)=>{
             setTodo(res)

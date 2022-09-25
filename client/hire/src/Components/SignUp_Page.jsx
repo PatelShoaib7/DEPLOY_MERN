@@ -19,7 +19,7 @@ export const SignUp_Page = () => {
 //   console.log(user)
 //  }
   // const getData = async ()=>{
-  //   fetch(" http://localhost:1111/auth/signup")
+  //   fetch("/auth/signup")
   //   .then((res)=> res.json())
   //   .then((data)=>{
   //     console.log(data)
@@ -28,7 +28,7 @@ export const SignUp_Page = () => {
 
   const handleSubmit = async (e)=>{
      e.preventDefault()
-        fetch(" http://localhost:1111/auth/signup",{
+        fetch("/auth/signup",{
             headers:{"Content-Type":"application/json"},
             method:'POST',
             body:JSON.stringify(user)

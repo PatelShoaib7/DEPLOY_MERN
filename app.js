@@ -4,7 +4,7 @@ const connection = require('./db');
 const cors = require('cors')
 const authRouter = require('./routes/auth.router')
 const taskRouter=require("./routes/task.router");
-
+const PORT=process.env.PORT || 5000;
 
 const app =express();
 app.use(cors())
@@ -15,19 +15,19 @@ app.use("/user",taskRouter)
  
 
 
-if(process.env.NODE_ENV=='production'){
+if(process.env.NODE_ENV=="production"){
+    app.use(express.static('client/build'))
     const path = require('path')
-
-    app.get('/',(req,res)=>{
-        app.use(express.static(path.resolve(__dirname,'client/hire','build')))
-        res.sendFile(path.resolve(__dirname,'client/hire','build','index.html'))
+    app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'client','build','index.html'))
     })
-}  
-app.listen(1111,async()=>
+}
+ 
+app.listen(PORT,async()=>
 {  
     try{
               await connection
-              console.log("connected to server sucessfully")
+              console.log("connected to server port 5000 sucessfully")
     }catch{
               console.log("oops something went wrong")
     }

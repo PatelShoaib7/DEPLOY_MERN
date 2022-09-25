@@ -4,7 +4,8 @@
     "express": "^4.18.1",
     "exprss": "^0.0.1-security",
     "mongoose": "^6.5.4",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7"
   },
   "name": "hire_bee_asign",
   "version": "1.0.0",
