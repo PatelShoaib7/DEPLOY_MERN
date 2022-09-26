@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const { MOGOURI } = require('./config/dev');
-
-const connection = mongoose.connect(MOGOURI,{
+const DB = process.env.DATABASE
+const connection = mongoose.connect(DB,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 
