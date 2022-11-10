@@ -1,2 +1,2 @@
 
-<h1>Deploying Mern App </h1>
+<h1>DEPLOY MERN  APP </h1>
